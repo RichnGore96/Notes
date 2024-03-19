@@ -32,7 +32,7 @@ const persons = [
 //     age: person.age
 // }))
 
-const copiedPersons = [...persons]
+//const copiedPersons = [...persons]
 
 persons.push({ name: 'Anna', age: 29 })
 

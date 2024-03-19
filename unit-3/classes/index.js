@@ -104,13 +104,20 @@ class Expense {
         this.plus_sales_tax;
     }
 
++    /**
++     * Calculates and sets the sales tax for the given expense.
++     * 
++     * @param {number} x - The percentage of tax to apply to the sell price.
++     */
     addTax(x) {
++        // Extract the percentage and the sell price from the parameters
         let percentage = x;
         let saleCost = this.sell_at;
 
++        // Calculate the sales tax by multiplying the sell price with the percentage
++        // and apply the result to the plus_sales_tax property of the expense object
         this.plus_sales_tax = (saleCost + (saleCost * percentage)).toFixed(2);
     }
-
 }
 
 let itemToSell = Expense.addUpchargeForProfit(1);
